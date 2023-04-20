@@ -118,6 +118,7 @@ li > label {
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
+  flex-grow: 1;
 }
 
 .delete img {
