@@ -109,7 +109,7 @@ li {
   align-items: center;
 }
 
-li > input[type="checkbox"] {
+.checkbox {
     margin: 0 10px;
 }
 
