@@ -15,47 +15,38 @@ var completedTasksHolder=document.getElementById("completed-tasks");//completed-
 
 
 //New task list item
-var createNewTaskElement = function(taskString) {
+const createNewTaskElement = (taskString) => {
 
-    var listItem = document.createElement("li");
+  const listItem = document.createElement("li");
 
-    //input (checkbox)
-    var checkBox = document.createElement("input");//checkbx
-    //label
-    var label = document.createElement("label");//label
-    //input (text)
-    var editInput = document.createElement("input");//text
-    //button.edit
-    var editButton = document.createElement("button");//edit button
+  const checkBox = document.createElement("input");
+  checkBox.type = "checkbox";
+  checkBox.className = "checkbox";
 
-    //button.delete
-    var deleteButton = document.createElement("button");//delete button
-    var deleteButtonImg = document.createElement("img");//delete button image
+  const label = document.createElement("label");
+  label.innerText = taskString;
 
-    label.innerText = taskString;
-    label.className = "task";
+  const editInput = document.createElement("input");
+  editInput.type = "text";
+  editInput.className = "task";
 
-    //Each elements, needs appending
-    checkBox.type = "checkbox";
-    checkBox.className = "checkbox";
-    editInput.type = "text";
-    editInput.className = "task";
+  const editButton = document.createElement("button");
+  editButton.innerText = "Edit";
+  editButton.className = "edit";
 
-    editButton.innerText = "Edit"; //innerText encodes special characters, HTML does not.
-    editButton.className = "edit";
+  const deleteButton = document.createElement("button");
+  const deleteButtonImg = document.createElement("img");
+  deleteButton.className = "delete";
+  deleteButtonImg.src = "./remove.svg";
+  deleteButton.appendChild(deleteButtonImg);
+    
 
-    deleteButton.className = "delete";
-    deleteButtonImg.src = './remove.svg';
-    deleteButton.appendChild(deleteButtonImg);
-
-
-    //and appending.
-    listItem.appendChild(checkBox);
-    listItem.appendChild(label);
-    listItem.appendChild(editInput);
-    listItem.appendChild(editButton);
-    listItem.appendChild(deleteButton);
-    return listItem;
+  listItem.appendChild(checkBox);
+  listItem.appendChild(label);
+  listItem.appendChild(editInput);
+  listItem.appendChild(editButton);
+  listItem.appendChild(deleteButton);
+  return listItem;
 }
 
 
