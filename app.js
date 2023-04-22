@@ -67,43 +67,38 @@ var addTask = function() {
 
 //Edit an existing task.
 
-var editTask = function() {
-    console.log("Edit Task...");
-    console.log("Change 'edit' to 'save'");
+const editTask = function() {
+  console.log("Edit Task...");
+  console.log("Change 'edit' to 'save'");
 
 
-    var listItem = this.parentNode;
+  const listItem = this.parentNode;
+  const editInput = listItem.querySelector('input[type=text]');
+  const label = listItem.querySelector("label");
+  const editBtn = listItem.querySelector(".edit");
+  const containsClass = listItem.classList.contains("editMode");
 
-    var editInput = listItem.querySelector('input[type=text]');
-    var label = listItem.querySelector("label");
-    var editBtn = listItem.querySelector(".edit");
-    var containsClass = listItem.classList.contains("editMode");
-    //If class of the parent is .editmode
-    if (containsClass) {
+  //If class of the parent is .editmode
+  if (containsClass) {
+    label.innerText = editInput.value;
+    editBtn.innerText = "Edit";
+  } else {
+    editInput.value=label.innerText;
+    editBtn.innerText = "Save";
+  }
 
-        //switch to .editmode
-        //label becomes the inputs value.
-        label.innerText = editInput.value;
-        editBtn.innerText = "Edit";
-    } else {
-        editInput.value=label.innerText;
-        editBtn.innerText = "Save";
-    }
-
-    //toggle .editmode on the parent.
-    listItem.classList.toggle("editMode");
+  listItem.classList.toggle("editMode");
 };
 
 
 //Delete task.
-var deleteTask = function() {
-    console.log("Delete Task...");
+const deleteTask = function() {
+  console.log("Delete Task...");
 
-    var listItem = this.parentNode;
-    var ul = listItem.parentNode;
-    //Remove the parent list item from the ul.
-    ul.removeChild(listItem);
-
+  const listItem = this.parentNode;
+  const ul = listItem.parentNode;
+    
+  ul.removeChild(listItem);
 }
 
 
