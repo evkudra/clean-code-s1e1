@@ -121,8 +121,8 @@ const taskIncomplete = function() {
 }
 
 
-var ajaxRequest = function() {
-    console.log("AJAX Request");
+const ajaxRequest = () => {
+  console.log("AJAX Request");
 }
 
 //The glue to hold it all together.
