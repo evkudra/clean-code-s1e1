@@ -79,10 +79,15 @@ const editTask = function() {
 
   //If class of the parent is .editmode
   if (containsClass) {
+    if (!editInput.value) {
+      alert('Fill in the input field');
+      return
+    }
     label.innerText = editInput.value;
     editBtn.innerText = "Edit";
+    
   } else {
-    editInput.value=label.innerText;
+    editInput.value = label.innerText;
     editBtn.innerText = "Save";
   }
 
