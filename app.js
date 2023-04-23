@@ -50,7 +50,6 @@ const createNewTaskElement = (taskString) => {
 }
 
 
-
 const addTask = function() {
   console.log("Add Task...");
 
@@ -63,7 +62,6 @@ const addTask = function() {
   taskInput.value = "";
 }
 
-//Edit an existing task.
 
 const editTask = function() {
   console.log("Edit Task...");
@@ -89,7 +87,6 @@ const editTask = function() {
 };
 
 
-//Delete task.
 const deleteTask = function() {
   console.log("Delete Task...");
 
@@ -123,11 +120,7 @@ const ajaxRequest = () => {
   console.log("AJAX Request");
 }
 
-//The glue to hold it all together.
 
-
-//Set the click handler to the addTask function.
-addButton.onclick = addTask;
 addButton.addEventListener("click",addTask);
 addButton.addEventListener("click",ajaxRequest);
 
@@ -148,20 +141,17 @@ const bindTaskEvents = function(taskListItem,checkBoxEventHandler) {
 }
 
 //cycle over incompleteTaskHolder ul list items
-//for each list item
-for (var i = 0; i < incompleteTaskHolder.children.length; i++){
 
-    //bind events to list items chldren(tasksCompleted)
-    bindTaskEvents(incompleteTaskHolder.children[i],taskCompleted);
+for (let i = 0; i < incompleteTaskHolder.children.length; i++){
+  bindTaskEvents(incompleteTaskHolder.children[i],taskCompleted);
 }
 
 
 
 
 //cycle over completedTasksHolder ul list items
-for (var i = 0; i < completedTasksHolder.children.length; i++){
-    //bind events to list items chldren(tasksIncompleted)
-    bindTaskEvents(completedTasksHolder.children[i],taskIncomplete);
+for (let i = 0; i < completedTasksHolder.children.length; i++){
+  bindTaskEvents(completedTasksHolder.children[i],taskIncomplete);
 }
 
 
