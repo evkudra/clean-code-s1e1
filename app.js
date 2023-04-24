@@ -37,7 +37,7 @@ const createNewTaskElement = (taskString) => {
   const deleteButton = document.createElement("button");
   const deleteButtonImg = document.createElement("img");
   deleteButton.className = "delete";
-  deleteButtonImg.src = "./remove.svg";
+  deleteButtonImg.src = "./images/remove.svg";
   deleteButton.appendChild(deleteButtonImg);
     
 
