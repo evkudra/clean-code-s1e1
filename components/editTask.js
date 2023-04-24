@@ -11,7 +11,7 @@ const editTask = function() {
 
   //If class of the parent is .editmode
   if (containsClass) {
-    if (!editInput.value) {
+    if (!editInput.value.trim().length) {
       alert('Fill in the input field');
       return
     }
