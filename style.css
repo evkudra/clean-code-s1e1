@@ -30,12 +30,6 @@ body {
 
 }
 
-.task {
-  width: 56%;
-  display: inline-block;
-  flex-grow: 1;
-}
-
 .task-row-wrapper {
   display: flex;
   padding: 20px 0;
@@ -82,6 +76,8 @@ h3 {
 
 .task {
   margin: 0;
+  display: inline-block;
+  flex-grow: 1;
   width: 226px;
   font-size: 18px;
   line-height: 18px;
