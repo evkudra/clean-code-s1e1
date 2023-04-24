@@ -4,7 +4,7 @@ const editTask = function() {
 
 
   const listItem = this.parentNode;
-  const editInput = listItem.querySelector('input[type=text]');
+  const editInput = listItem.querySelector('.task');
   const label = listItem.querySelector("label");
   const editBtn = listItem.querySelector(".edit");
   const containsClass = listItem.classList.contains("editMode");
