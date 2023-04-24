@@ -6,8 +6,8 @@ body {
 }
 
 .wrapper {
-    width: 500px;
-    margin: 0 auto;
+  width: 500px;
+  margin: 0 auto;
 }
 
 .priority-matrix {
@@ -80,7 +80,7 @@ h3 {
   text-transform: uppercase;
 }
 
-input[type="text"] {
+.task {
   margin: 0;
   width: 226px;
   font-size: 18px;
@@ -94,7 +94,7 @@ input[type="text"] {
   color: #888;
 }
 
-input[type="text"]:focus {
+.task:focus {
   color: #333;
 }
 
@@ -110,7 +110,7 @@ li {
 }
 
 .checkbox {
-    margin: 0 10px;
+  margin: 0 10px;
 }
 
 li > label {
@@ -140,15 +140,15 @@ ul#completed-tasks label {
 
 /* Edit Task */
 
-ul li input[type=text] {
+li .task {
   display: none;
 }
 
-ul li.editMode input[type=text] {
+.editMode .task {
   display: inline-block;
   width: 224px;
 }
 
-ul li.editMode label {
+.editMode label {
   display: none;
 }
